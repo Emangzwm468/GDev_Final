@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 52773460}
   - component: {fileID: 52773459}
   - component: {fileID: 52773461}
+  - component: {fileID: 52773462}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -156,7 +157,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 7
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -198,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rd: {fileID: 52773459}
-  jump: 6
+  jump: 5
   sidewalk:
     serializedVersion: 2
     m_Bits: 64
@@ -206,6 +207,18 @@ MonoBehaviour:
   gDistance: 0.25
   jTime: 0.5
   jTimer: 0
+--- !u!114 &52773462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52773458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4214180049460664aadaed9aa328a5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &194774932
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,8 +250,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obsPrefabs:
   - {fileID: 6111557358756235054, guid: bb30cde12fb2865479fe9482508518e5, type: 3}
-  spawnTime: 3
-  spd: 2
+  spawnTime: 4
+  spd: 4
   obsSpawnTimer: 0
 --- !u!4 &194774934
 Transform:
@@ -249,7 +262,7 @@ Transform:
   m_GameObject: {fileID: 194774932}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.655, y: -3.997, z: 0}
+  m_LocalPosition: {x: 10.778, y: -3.997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
