@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 52773460}
   - component: {fileID: 52773459}
+  - component: {fileID: 52773461}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -181,8 +182,30 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4162967724180529418}
+  - {fileID: 1376052904}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &52773461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52773458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5651af1b5c0aa734a8fcda457684d8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rd: {fileID: 52773459}
+  jump: 6
+  sidewalk:
+    serializedVersion: 2
+    m_Bits: 64
+  fposition: {fileID: 1376052904}
+  gDistance: 0.25
+  jTime: 0.5
+  jTimer: 0
 --- !u!1 &505755905
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +298,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376052903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1376052904}
+  m_Layer: 7
+  m_Name: Feet
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1376052904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376052903}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.545, y: -1.095, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 52773460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4162967724180529417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -289,7 +343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 321456982632700098, guid: ffb5dbe1684f95c45abfd9b3150a3615, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7454579
+      value: -0.78
       objectReference: {fileID: 0}
     - target: {fileID: 321456982632700098, guid: ffb5dbe1684f95c45abfd9b3150a3615, type: 3}
       propertyPath: m_LocalPosition.z
@@ -392,7 +446,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.7}
   m_EdgeRadius: 0
 --- !u!1001 &8380443326542282080
 PrefabInstance:
