@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MenuHandler : MonoBehaviour
 {
+    [SerializeField] AudioSource SFX;
+
+    public void buttonSound()
+    {
+        SFX.Play();
+    }
     //When the player presses the Play button, it will bring them to the "Game" Scene
     public void Play()
     {

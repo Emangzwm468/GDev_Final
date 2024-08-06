@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class SettingsHandler : MonoBehaviour
 {
     [SerializeField] TMPro.TMP_Dropdown Resolution;
     Resolution[] resolutions;
+
+    [SerializeField] AudioMixer audioMixer;
     void Start()
     {
         resolutions = Screen.resolutions;
@@ -33,7 +36,7 @@ public class SettingsHandler : MonoBehaviour
     }
     public void Setvolume (float volume)
     {
-        Debug.Log(volume);
+        audioMixer.SetFloat("MusicVol", Mathf.Log10(volume) * 20);
     }
 
     public void Qualityset (int quality)

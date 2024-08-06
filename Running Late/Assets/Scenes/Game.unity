@@ -299,11 +299,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bread: {fileID: 2240484320616274848, guid: 311e2eaf747024a4d95e213f4fd7630e, type: 3}
-  xMax: 2
-  xMin: 1.5
+  xMax: 4
+  xMin: 3.5
   yMax: -0.5
   yMin: -1.25
-  timeBetweenSpawns: 1
+  timeBetweenSpawns: 10
 --- !u!4 &213426011
 Transform:
   m_ObjectHideFlags: 0
@@ -313,7 +313,7 @@ Transform:
   m_GameObject: {fileID: 213426009}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.5, y: 0, z: 0}
+  m_LocalPosition: {x: -5.25, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
