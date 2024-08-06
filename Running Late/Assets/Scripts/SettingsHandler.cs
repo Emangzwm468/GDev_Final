@@ -44,6 +44,20 @@ public class SettingsHandler : MonoBehaviour
         QualitySettings.SetQualityLevel (quality);
     }
 
+    public void Lowquality()
+    {
+        QualitySettings.SetQualityLevel(0, true);
+    }
+
+    public void Medquality()
+    {
+        QualitySettings.SetQualityLevel(1, true);
+    }
+
+    public void Hiquality()
+    {
+        QualitySettings.SetQualityLevel(2, true);
+    }
     public void Fullscreen(bool fullscreen)
     {
         Screen.fullScreen = fullscreen;
