@@ -36,7 +36,9 @@ public class SettingsHandler : MonoBehaviour
     }
     public void Setvolume (float volume)
     {
+        audioMixer.SetFloat("MasterVol", Mathf.Log10(volume) * 20);
         audioMixer.SetFloat("MusicVol", Mathf.Log10(volume) * 20);
+        audioMixer.SetFloat("SFXVol", Mathf.Log10(volume) * 20);
     }
 
     public void Qualityset (int quality)
