@@ -14,7 +14,12 @@ public class PlayMovement : MonoBehaviour
     private bool isTouchingGround = false;
     private bool isJumping = false;
     [SerializeField] private float jTimer;
+    AudioSource jumpSFX;
 
+    private void Start()
+    {
+        jumpSFX = GetComponent<AudioSource>();
+    }
     private void Update()
     {
         isTouchingGround = Physics2D.OverlapCircle(fposition.position, gDistance, sidewalk);
@@ -32,6 +37,7 @@ public class PlayMovement : MonoBehaviour
                 rd.velocity = Vector2.up * jump;
 
                 jTimer += Time.deltaTime;
+                jumpSFX.Play();
             } else
             {
                 isJumping = false;
